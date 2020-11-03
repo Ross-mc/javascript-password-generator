@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    
+    <title>Password Generator</title>
+</head>
+<body>
+    <h1>Password Generator</h1>
+    <div class="container">
+        <div class="initial_container">
+            <div class="password_box">
+                <h2 id="pass_header">Your Secure Password</h2>
+                <p id="generated_password"></p>
+            </div>
+            <button type="button" class="generate" id="initial">Generate Password</button>
+        </div>
+        <form class="criteria_container">
+            <h2 class="criteria_header">Password Criteria</h2>
+            <fieldset>
+                <legend>Password Length</legend>
+                <input type="number" min="8" max="128" value="8" id="length"><br>
+                <p class="small">(must be between 8 and 128 characters)</p>
+            </fieldset>
+            
+            
+            <fieldset class="checkboxes">
+                <legend>Select special characters</legend>
+                <ul>
+                    <li>
+                        <input type="checkbox" class="checkmark" id="uppercase">
+                        <label for="uppercase">Uppercase</label>                        
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkmark" id="lowercase">
+                        <label for="lowercase">Lowercase</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkmark" id="numeric">
+                        <label for="numeric">Numeric</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checkmark" id="special">
+                        <label for="special">Special Characters</label>
+                    </li>
+                </ul> 
+            </fieldset>
+            <button type="button" class="generate" id="criteria_btn">Generate Password</button>
+
+        </form>
+
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+</html>
