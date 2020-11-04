@@ -7,7 +7,7 @@ const CRITERIA_BTN = document.querySelector("#criteria_btn")
 
 INITIAL_BTN.addEventListener("click", function(){
     fadeOut(INITIAL_CONTAINER);
-    fadeIn(CRITERIA_CONTAINER);
+    setTimeout(fadeIn, 600, CRITERIA_CONTAINER);
 });
 
 CRITERIA_BTN.addEventListener("click", function(){
@@ -17,11 +17,38 @@ CRITERIA_BTN.addEventListener("click", function(){
     let numeric = document.getElementById("numeric").checked;
     let special = document.getElementById("special").checked;
 
-    console.log(passwordLength);
-    console.log(uppercase);
-    console.log(lowercase);
-    console.log(numeric);
-    console.log(special);
+
+    let charObj = {
+        uppercaseCheck: uppercase,
+        lowercaseCheck: lowercase,
+        numericCheck: numeric,
+        specialCheck: special
+    };
+
+    let charValues = Object.values(charObj);
+
+    let numTrue = 0;
+
+    for (let i = 0; i<charValues.length; i++){
+        if (charValues[i] === true){
+            numTrue++;
+        }
+    }
+
+    if (passwordLength < 8 || passwordLength > 128){
+        alert('Please enter a length between 8 and 128');
+        return
+    }
+
+
+    if (numTrue < 2){
+        alert('You must select at least 2 Character Options');
+        return
+    }
+
+
+
+
 
 })
 
