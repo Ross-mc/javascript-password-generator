@@ -3,6 +3,10 @@ html{
     text-align: center;
 }
 
+body{
+    padding-top: 5vh;
+}
+
 h1{
     font-size: 1.6rem;
 }
@@ -15,7 +19,8 @@ h1{
 .initial_container{
     background-color: #7f8c8d;
     position: absolute;
-    height: 25vh;
+    height: auto;
+    min-height: 32vh;
     border-radius: 10px;
     width: 95%;
     margin: 0 auto;
@@ -32,7 +37,7 @@ h1{
     top: 1vh;
     border: 2px dashed black;
     border-radius: 8px;
-    height: 15vh;
+    min-height: 15vh;
 }
 
 #pass_header{
@@ -54,6 +59,15 @@ h1{
 #initial{
     position: relative;
     bottom: -4vh;
+}
+
+#generated_password{
+    margin-top: 4px;
+    padding: 1px 4px;
+    position: relative;
+    top: -3vh;
+    font-size: 0.75rem;
+    word-wrap: break-word;
 }
 
 .criteria_container{
@@ -112,6 +126,11 @@ li{
 
 
 @media(min-width: 769px){
+    
+    body{
+        padding-top: 15vh;
+    }
+
     .container{
         width: 45%;
         margin: 0 auto;
@@ -119,5 +138,15 @@ li{
 
     #pass_header{
         top: -1vh;
+    }
+
+    #generated_password{
+        font-size: 1rem;
+        top: -0.5vh;
+        word-wrap: break-word;
+    }
+
+    .initial_container{
+        min-height: 25vh;
     }
 }

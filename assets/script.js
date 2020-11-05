@@ -85,6 +85,8 @@ CRITERIA_BTN.addEventListener("click", function(){
 
     let numTrue = 0;
 
+    //checking the number of selected checkboxes for validation purposes
+
     for (let i = 0; i<charValues.length; i++){
         if (charValues[i] === true){
             numTrue++;
@@ -103,6 +105,8 @@ CRITERIA_BTN.addEventListener("click", function(){
         alert('You must select at least 2 Character Options');
         return
     }
+
+    //generating an array of all selected characters based upon the users selection
 
     if (charObj.uppercaseCheck === true){
         selectedChars.push(...UPPERCASE_ARR);
@@ -127,6 +131,11 @@ CRITERIA_BTN.addEventListener("click", function(){
         let char = selectedChars[randIndex];
         generatedPassword += char;
     }
+
+    document.getElementById("generated_password").textContent = generatedPassword;
+
+    fadeOut(CRITERIA_CONTAINER);
+    setTimeout(fadeIn, 600, INITIAL_CONTAINER);
 
 
 
