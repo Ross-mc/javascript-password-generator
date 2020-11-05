@@ -19,6 +19,6 @@ The password generator is available [here](https://ross-mc.github.io/javascript-
 
 ## Screenshots
 
-![](assets/index-screenshot.jpg){:height="225px" width="400px"}
-![](assets/criteria-selector.jpg){:height="225px" width="400px"}
-![](assets/generated-password.jpg){:height="225px" width="400px"}
+<img src="assets/index-screenshot.jpg" height="225px" width="400px">
+<img src="assets/criteria-selector.jpg" height="225px" width="400px">
+<img src="assets/generated-password.jpg" height="225px" width="400px">
